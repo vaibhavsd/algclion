@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cstdlib>
 #include <cassert>
+#include <vector>
 
 using namespace std;
 
@@ -11,10 +11,21 @@ int fibonacci_naive(int n) {
     return fibonacci_naive(n - 1) + fibonacci_naive(n - 2);
 }
 
-int fibonacci_fast(int n) {
-    // write your code here
+long long fibonacci_fast(int n) {
 
-    return 0;
+    std::vector<long long> list;
+    list.push_back(0);
+    list.push_back(1);
+
+    if (n<=1){
+        return list[n];
+    }
+
+    for(int i=2; i<=n; i++){
+        list.push_back(list[i-1] + list[i-2]);
+    }
+    return list[n];
+
 }
 
 void test_solution() {
@@ -28,8 +39,8 @@ int main() {
     int n = 0;
     std::cin >> n;
 
-    std::cout << fibonacci_naive(n) << '\n';
+//    std::cout << fibonacci_naive(n) << '\n';
     //test_solution();
-    //std::cout << fibonacci_fast(n) << '\n';
+    std::cout << fibonacci_fast(n) << '\n';
     return 0;
 }
