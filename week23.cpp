@@ -43,8 +43,9 @@ int gcd_pro(int a, int b){
 
 
 int main() {
-    int a= 999999999;
-    int b= 1999999999;
+    int a;
+    int b;
+    cin >> a >> b;
 
     cout << gcd_pro(a,b) << endl;
 //    std::cout << gcd_naive(a, b) << std::endl;

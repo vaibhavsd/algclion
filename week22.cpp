@@ -40,7 +40,8 @@ int get_fibonacci_last_digit_pro(int n){
 
 
 int main() {
-    int n = 327305;
+    int n;
+    cin >> n;
 
     int j = get_fibonacci_last_digit_pro(n);
     std::cout << j << std::endl;

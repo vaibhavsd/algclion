@@ -41,13 +41,13 @@ long long lcm_pro(int a, int b){
 
 
 int main() {
-    int a= 28851538;
-    int b= 1183019;
-//    std::cin >> a >> b;
+    int a;
+    int b;
+    std::cin >> a >> b;
 
     cout<< lcm_pro(a,b) << endl;
 
-    std::cout << lcm_naive(a, b) << std::endl;
+//    std::cout << lcm_naive(a, b) << std::endl;
 
     return 0;
 }

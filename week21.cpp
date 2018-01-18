@@ -36,7 +36,7 @@ void test_solution() {
 }
 
 int main() {
-    int n = 0;
+    int n;
     std::cin >> n;
 
 //    std::cout << fibonacci_naive(n) << '\n';
