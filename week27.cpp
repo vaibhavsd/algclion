@@ -29,8 +29,16 @@ long long get_fibonacci_partial_sum_naive(long long from, long long to) {
 long long get_fibonacci_partial_sum_pro(long long from, long long to) {
 
 
-    // Think: Sum from 6 to 8 is same as sum 6 to 88.
-    // Sum 7 to 14 is same as sum 7 to 74.
+    // Think: Sum 7 to 14 is same as sum 7 to 74.
+    // Sum from 6 to 8 is same as sum 6 to 68.
+    //Proof:
+    // 6->128= 6->60 + 60->120 + 120->6 + 6->8
+    // 6->128= 6->60 + 0 + 120->6 + 6->8
+    // 6->128= 6->60 + 120->6 + 6->8
+    // 6->128= 10*constant + 6->8
+    // 6->128 %10 = 10*constant %10 + 6->8 %10
+    // 6->128 %10 = 0 + 6->8 %10
+
 
     vector<int> remainder_list;
     remainder_list.push_back(0);
