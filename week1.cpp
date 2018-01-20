@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using std::vector;
 using std::cin;
@@ -19,7 +20,8 @@ long long MaxPairwiseProduct(const vector<int>& numbers) {
     return result;
 }
 
-long long MaxPairwiseProductFast(const vector<int>& numbers) {
+long long MaxPairwiseProductFast(vector<int>& numbers) {
+
     long long result = 0;
     int n= numbers.size();
     cout<< "n: " << n << endl;
@@ -29,28 +31,31 @@ long long MaxPairwiseProductFast(const vector<int>& numbers) {
             max_number_index= i;
     }
     cout<< "max index: " << max_number_index << endl;
-    int second_max_number_index= 1;
+    int second_max_number_index;
+    if (max_number_index==1)
+        second_max_number_index = 0;
+    else
+        second_max_number_index =1;
+
     for(int i=0; i<n; i++){
-        if((numbers[i]>numbers[second_max_number_index]) && (max_number_index!= 0))
+        if((numbers[i]>numbers[second_max_number_index]) && (max_number_index!= i))
             second_max_number_index= i;
     }
     cout<< "second max index: " << second_max_number_index << endl;
-    result= numbers[max_number_index] * numbers[second_max_number_index];
+//    result= numbers[max_number_index] * numbers[second_max_number_index];
 
-    return result;
+    return (long long) numbers[max_number_index] * numbers[second_max_number_index];
 }
 
 int main() {
-//    int n =2;
+    int n=2;
 //    cin >> n;
-    vector<int> numbers;
+    vector<int> numbers(n);
 //    for (int i = 0; i < n; ++i) {
 //        cin >> numbers[i];
 //    }
-    numbers.push_back(100000);
-    numbers.push_back(90000);
-
-    cout<< "size: " << numbers.size() << endl;
+    numbers[0]= 90000;
+    numbers[1]= 100000;
 
     long long result = MaxPairwiseProductFast(numbers);
     cout << result << "\n";
