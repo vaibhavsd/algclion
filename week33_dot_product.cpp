@@ -4,7 +4,7 @@
 
 using std::vector;
 
-long long max_dot_product(vector<int> a, vector<int> b) {
+long long max_dot_product(vector<long> a, vector<long> b) {
   // write your code here
   long long result = 0;
   for (size_t i = 0; i < a.size(); i++) {
@@ -16,7 +16,7 @@ long long max_dot_product(vector<int> a, vector<int> b) {
 int main() {
   size_t n;
   std::cin >> n;
-  vector<int> a(n), b(n);
+  vector<long> a(n), b(n);
   for (size_t i = 0; i < n; i++) {
     std::cin >> a[i];
   }
