@@ -3,7 +3,7 @@ project(algclion)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp week1.cpp week21.cpp week22.cpp week23.cpp week24.cpp week25.cpp week26.cpp week27.cpp week31_change.cpp fuel.cpp week32_fractional_knapsack.cpp week33_dot_product.cpp week36_largest_number.cpp week35_different_summands.cpp week34.cpp week41.cpp)
+set(SOURCE_FILES main.cpp week1.cpp week21.cpp week22.cpp week23.cpp week24.cpp week25.cpp week26.cpp week27.cpp week31_change.cpp fuel.cpp week32_fractional_knapsack.cpp week33_dot_product.cpp week36_largest_number.cpp week35_different_summands.cpp week34.cpp week41.cpp week43.cpp)
 
 add_executable(algclion ${SOURCE_FILES})
 add_executable(week1 week1.cpp)
@@ -26,3 +26,5 @@ add_executable(week35_different_summands week35_different_summands.cpp)
 add_executable(week34 week34.cpp)
 
 add_executable(week41 week41.cpp)
+
+add_executable(week43 week43.cpp)
